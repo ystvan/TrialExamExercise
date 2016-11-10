@@ -32,6 +32,7 @@ namespace SensorListener
 
             while (true)
             {
+
                 //Define the "predicted" max size of data to be received "4000" is more than enough
                 byte[] databuffer = new byte[4000];
 
@@ -39,11 +40,13 @@ namespace SensorListener
                 databuffer = simpleSocket.Receive(ref remoteEndPoint);
 
                 String encodedText = Encoding.ASCII.GetString(databuffer);
-                Console.WriteLine("MSG: " + encodedText);
+                Console.WriteLine("Received data from sensor: \nPlain data\n" + encodedText);
 
                 int light;
                 int temp;
                 String timestamp;
+
+                //Listening to JSON & XML
 
                 TextReader reader = new StringReader(encodedText);
                 String str1 = reader.ReadLine();
@@ -54,7 +57,7 @@ namespace SensorListener
                 temp = Convert.ToInt32(str2.Split(' ')[1]);
                 timestamp = str3.Split(' ')[1];
 
-                Console.WriteLine($"light={light}\ntemperature={temp}\ntimestamp={timestamp}");
+                Console.WriteLine($"Received data from sensor: \nJSON and XML:\nlight={light}\ntemperature={temp}\ntimestamp={timestamp}\n");
             }
 
             
