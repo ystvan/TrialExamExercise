@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 using Newtonsoft.Json;
@@ -71,6 +72,8 @@ namespace SensorBrodcaster
                 byte[] decodedBufferXml = Encoding.ASCII.GetBytes(xmlBuffer);
                 IPEndPoint endPoint3 = new IPEndPoint(IPAddress.Broadcast, port + 2);
 
+                // Put it to "sleep" before the loop goes over again:
+                Thread.Sleep(5000);
 
             }
 
