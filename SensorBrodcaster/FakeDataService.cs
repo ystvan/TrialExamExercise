@@ -17,6 +17,7 @@ namespace SensorBrodcaster
         private int port;
         private Random rand;
 
+        //In the constructor we can change the port number later, for the sake of flexibility
         public FakeDataService(int port)
         {
             this.port = port;
