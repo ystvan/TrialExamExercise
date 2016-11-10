@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorWcf", "TrialExam2Tutor\SensorWcf.csproj", "{E34495F3-8B9F-4660-83E4-55F7D6B64D78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorListener", "SensorListener\SensorListener.csproj", "{6C0958B0-A4D7-4B34-B55B-D8D838D1B27D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorBrodcaster", "SensorBrodcaster\SensorBrodcaster.csproj", "{42E83023-E119-4B13-9D7F-4C95A30AC2D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E34495F3-8B9F-4660-83E4-55F7D6B64D78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E34495F3-8B9F-4660-83E4-55F7D6B64D78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E34495F3-8B9F-4660-83E4-55F7D6B64D78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E34495F3-8B9F-4660-83E4-55F7D6B64D78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C0958B0-A4D7-4B34-B55B-D8D838D1B27D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C0958B0-A4D7-4B34-B55B-D8D838D1B27D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C0958B0-A4D7-4B34-B55B-D8D838D1B27D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C0958B0-A4D7-4B34-B55B-D8D838D1B27D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42E83023-E119-4B13-9D7F-4C95A30AC2D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E83023-E119-4B13-9D7F-4C95A30AC2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E83023-E119-4B13-9D7F-4C95A30AC2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E83023-E119-4B13-9D7F-4C95A30AC2D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
