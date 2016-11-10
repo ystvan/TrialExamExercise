@@ -14,7 +14,10 @@ namespace SensorBrodcaster
     {
         static void Main(string[] args)
         {
+            FakeDataService server = new FakeDataService(7000);
+            server.Start();
 
+            Console.ReadLine();
         }
     }
 }
