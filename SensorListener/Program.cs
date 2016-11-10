@@ -13,12 +13,12 @@ namespace SensorListener
 {
     class Program
     {
-        
+        private const int PORT = 7000;
 
         static void Main(string[] args)
         {
-            
-            
+            UDPStreamReceiver client = new UDPStreamReceiver(PORT);
+            client.Start();
             
         }
     }
