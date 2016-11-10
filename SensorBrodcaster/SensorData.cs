@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SensorBrodcaster
 {
-    class SensorData
+    public class SensorData
     {
         private int light;
         private int temp;
