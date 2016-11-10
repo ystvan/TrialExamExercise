@@ -77,7 +77,7 @@ namespace SensorBrodcaster
                 Console.Beep();
 
                 // Put it to "sleep" before the loop goes over again:
-                Thread.Sleep(5000);
+                Thread.Sleep(10000);
 
             }
 
