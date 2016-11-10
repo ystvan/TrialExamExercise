@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 using Newtonsoft.Json;
 
 namespace SensorBrodcaster
@@ -60,12 +62,31 @@ namespace SensorBrodcaster
                 IPEndPoint endPoint2 = new IPEndPoint(IPAddress.Broadcast, port + 1);
                 simpleSocket.SendTo(decodedBufferJson, endPoint2);
 
+                // Sending XML
 
+                //Serializing, see helper method further below:
+
+                String xmlBuffer = SerializeObjectToXmlString(data);
+                Console.WriteLine(xmlBuffer);
+                byte[] decodedBufferXml = Encoding.ASCII.GetBytes(xmlBuffer);
+                IPEndPoint endPoint3 = new IPEndPoint(IPAddress.Broadcast, port + 2);
 
 
             }
 
 
+        }
+
+        // Helper method for XML serialization
+        public static string SerializeObjectToXmlString(SensorData toSerialize)
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(toSerialize.GetType());
+
+            using (StringWriter textWriter = new StringWriter())
+            {
+                xmlSerializer.Serialize(textWriter, toSerialize);
+                return textWriter.ToString();
+            }
         }
     }
 }
