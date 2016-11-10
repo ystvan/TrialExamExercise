@@ -52,7 +52,14 @@ namespace SensorBrodcaster
 
                 //Sending Json data
 
+                //Serializing:
                 String jsonBuffer = JsonConvert.SerializeObject(data);
+                Console.WriteLine(jsonBuffer);
+
+                byte[] decodedBufferJson = Encoding.ASCII.GetBytes(jsonBuffer);
+                IPEndPoint endPoint2 = new IPEndPoint(IPAddress.Broadcast, port + 1);
+                simpleSocket.SendTo(decodedBufferJson, endPoint2);
+
 
 
 
