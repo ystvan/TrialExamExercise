@@ -72,6 +72,7 @@ namespace SensorBrodcaster
                 Console.WriteLine(xmlBuffer);
                 byte[] decodedBufferXml = Encoding.ASCII.GetBytes(xmlBuffer);
                 IPEndPoint endPoint3 = new IPEndPoint(IPAddress.Broadcast, port + 2);
+                simpleSocket.SendTo(decodedBufferXml, endPoint3);
 
                 // Put it to "sleep" before the loop goes over again:
                 Thread.Sleep(5000);
