@@ -14,6 +14,9 @@ namespace SensorBrodcaster
     {
         static void Main(string[] args)
         {
+            Console.Title = "UDP Server";
+            Console.BackgroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.Red;
             FakeDataService server = new FakeDataService(7000);
             server.Start();
 

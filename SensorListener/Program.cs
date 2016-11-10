@@ -17,6 +17,7 @@ namespace SensorListener
 
         static void Main(string[] args)
         {
+            Console.Title = "UDP Client";
             UDPStreamReceiver client = new UDPStreamReceiver(PORT);
             client.Start();
             

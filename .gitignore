@@ -240,3 +240,10 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+SensorListener/Service References/LocalReference/Service1.xsd
+*.svcinfo
+SensorListener/Service References/LocalReference/Reference.cs
+*.svcmap
+SensorListener/Service References/LocalReference/SensorListener.LocalReference.SensorData.datasource
+*.wsdl
+SensorListener/Service References/LocalReference/Service11.xsd
