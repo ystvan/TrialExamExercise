@@ -8,8 +8,10 @@ using System.Text;
 
 namespace TrialExam2Tutor
 {
-    public class SensorService : ISensorService
+    [ServiceContract]
+    public interface ISensorService
     {
+
         
     }
 }
