@@ -49,7 +49,7 @@
   <ItemGroup>
     <Compile Include="FakeDataService.cs" />
     <Compile Include="SensorData.cs" />
-    <Compile Include="UDPServerSender.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

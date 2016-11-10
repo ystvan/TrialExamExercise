@@ -11,7 +11,7 @@ using System.Threading;
 
 namespace SensorListener
 {
-    class UDPClientReceiver
+    class Program
     {
         
 

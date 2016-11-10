@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace SensorBrodcaster
 {
-    class UDPServerSender
+    class Program
     {
         static void Main(string[] args)
         {
