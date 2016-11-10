@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using SensorListener.SensorReference;
 
 namespace SensorListener
 {
@@ -59,7 +60,11 @@ namespace SensorListener
 
                 Console.WriteLine($"Received data from sensor: \nJSON and XML:\nlight={light}\ntemperature={temp}\ntimestamp={timestamp}\n");
                 
+                SensorServiceClient azureClient = new SensorServiceClient("BasicHttpBinding_ISensorService");
 
+                azureClient.StoreData(new SensorData {Light = Convert.ToByte(light),
+                                                        Temperature = Convert.ToByte(temp),
+                                                            TimeStamp = timestamp});
             }
 
             
