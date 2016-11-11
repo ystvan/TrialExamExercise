@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.ServiceModel;
+using System.ServiceModel.Description;
 using System.Text;
 using System.Threading.Tasks;
 using SensorListener.SensorReference;
@@ -62,6 +64,7 @@ namespace SensorListener
 
                 using (SensorServiceClient azureClient = new SensorServiceClient("BasicHttpBinding_ISensorService"))
                 {
+                    
                     azureClient.StoreData(new SensorData
                     {
                         Light = Convert.ToByte(light),
