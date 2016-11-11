@@ -247,3 +247,7 @@ SensorListener/Service References/LocalReference/Reference.cs
 SensorListener/Service References/LocalReference/SensorListener.LocalReference.SensorData.datasource
 *.wsdl
 SensorListener/Service References/LocalReference/Service11.xsd
+SensorWcf.Azure/SensorWcf.Azure.ccproj
+ImportExport/generatedProxy.cs
+ImportExport/schemas.microsoft.com.2003.10.Serialization.xsd
+ImportExport/TrialExam2Tutor.xsd
