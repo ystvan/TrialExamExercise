@@ -59,12 +59,18 @@ namespace SensorListener
                 timestamp = str3.Split(' ')[1];
 
                 Console.WriteLine($"Received data from sensor: \nJSON and XML:\nlight={light}\ntemperature={temp}\ntimestamp={timestamp}\n");
-                
-                SensorServiceClient azureClient = new SensorServiceClient("BasicHttpBinding_ISensorService");
 
-                azureClient.StoreData(new SensorData {Light = Convert.ToByte(light),
-                                                        Temperature = Convert.ToByte(temp),
-                                                            TimeStamp = timestamp});
+                using (SensorServiceClient azureClient = new SensorServiceClient("BasicHttpBinding_ISensorService"))
+                {
+                    azureClient.StoreData(new SensorData
+                    {
+                        Light = Convert.ToByte(light),
+                        Temperature = Convert.ToByte(temp),
+                        TimeStamp = timestamp
+                    });
+                }
+                
+
             }
 
             

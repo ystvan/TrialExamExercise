@@ -251,3 +251,4 @@ SensorWcf.Azure/SensorWcf.Azure.ccproj
 ImportExport/generatedProxy.cs
 ImportExport/schemas.microsoft.com.2003.10.Serialization.xsd
 ImportExport/TrialExam2Tutor.xsd
+TrialExam2Tutor/Properties/PublishProfiles/demosoap - Web Deploy (2).pubxml
